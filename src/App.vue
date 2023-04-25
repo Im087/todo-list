@@ -1,47 +1,27 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <v-app>
+    <v-main>
+      <ToDoItemVue></ToDoItemVue>
+    </v-main>
+  </v-app>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script lang="ts">
+import { defineComponent } from 'vue';
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+import ToDoItemVue from './components/ToDoItem/ToDoItem.vue';
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+export default defineComponent({
+  name: 'App',
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+  components: {
+    ToDoItemVue,
+  },
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+  data () {
+    return {
+      
+    }
+  },
+});
+</script>
