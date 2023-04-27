@@ -5,7 +5,12 @@
     </v-container>
     <v-main>
       <CreateItem></CreateItem>
-      <ToDoItemVue v-for="toDoItem in toDoArray" :key="toDoItem.timeStamp" :toDoItem="toDoItem"></ToDoItemVue>
+      <ToDoItemVue
+        v-for="toDoItem in toDoArray"
+        :key="toDoItem.timeStamp"
+        :toDoItem="toDoItem"
+      >
+      </ToDoItemVue>
     </v-main>
   </v-app>
 </template>

@@ -1,7 +1,11 @@
 <template>
   <v-container class="d-flex">
-    <v-text-field placeholder="What are you gonna do?" v-model="toDoItem.toDoContent"></v-text-field>
-    <v-btn color="info" size="x-large" @click="addNewItem">Create</v-btn>
+    <v-text-field
+      placeholder="What are you gonna do?"
+      v-model="toDoItem.toDoContent"
+    >
+    </v-text-field>
+    <v-btn color="info" size="x-large" @click="addToDoItem">Create</v-btn>
   </v-container>
 </template>
 
@@ -21,7 +25,7 @@ export default defineComponent ({
       toDoContent: '',
     });
 
-    const addNewItem = async () => {
+    const addToDoItem = () => {
       toDoItem.value.timeStamp = new Date().toISOString();
       let item = Object.assign({}, toDoItem.value)
       toDoItem.value.toDoContent = '';
@@ -30,7 +34,7 @@ export default defineComponent ({
 
     return {
       toDoItem,
-      addNewItem
+      addToDoItem
     };
   }
 });

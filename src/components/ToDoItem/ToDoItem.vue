@@ -18,12 +18,13 @@
     >
     </v-textarea>
     <v-btn color="warning" size="large">Edit</v-btn>
-    <v-btn color="error" size="large">Delete</v-btn>
+    <v-btn color="error" size="large" @click="deleteToDoItem(timeStamp)">Delete</v-btn>
   </v-container>
 </template>
 
 <script lang="ts">
 import { defineComponent, toRefs } from "vue";
+import { useStore } from "@/store";
 
 export default defineComponent ({
   name: "ToDoItem",
@@ -35,13 +36,21 @@ export default defineComponent ({
     }
   },
   setup(props) {
+    const store = useStore();
     const toDoItem = toRefs(props).toDoItem;
     const itemStatus = toDoItem.value.itemStatus;
+    const timeStamp = toDoItem.value.timeStamp;
     const toDoContent = toDoItem.value.toDoContent;
+
+    const deleteToDoItem = (timeStamp: string) => {
+      store.dispatch('deleteToDoItem', timeStamp);
+    }
 
     return {
       itemStatus,
-      toDoContent
+      timeStamp,
+      toDoContent,
+      deleteToDoItem
     };
   }
 });
