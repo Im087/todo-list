@@ -12,12 +12,14 @@
       rows="1"
       bg-color="transparent"
       v-model="toDoItem.toDoContent"
+      :disabled="toDoItem.isDisabled"
       clearable
       auto-grow
       no-resize
     >
     </v-textarea>
-    <v-btn color="warning" size="large">Edit</v-btn>
+    <v-btn v-if="toDoItem.isDisabled" color="warning" size="large" @click="editToDoItem">Edit</v-btn>
+    <v-btn v-if="!toDoItem.isDisabled" color="success" size="large" @click="confirmToDoItem">OK</v-btn>
     <v-btn color="error" size="large" @click="deleteToDoItem(toDoItem.timeStamp)">Delete</v-btn>
   </v-container>
 </template>
@@ -40,12 +42,20 @@ export default defineComponent ({
     const store = useStore();
     const toDoItem = toRefs(props).toDoItem;
 
+    const editToDoItem = () => {
+      toDoItem.value.isDisabled = false;
+    };
+    const confirmToDoItem = () => {
+      toDoItem.value.isDisabled = true;
+    };
     const deleteToDoItem = (timeStamp: string) => {
       store.dispatch('deleteToDoItem', timeStamp);
-    }
+    };
 
     return {
       toDoItem,
+      editToDoItem,
+      confirmToDoItem,
       deleteToDoItem
     };
   }

@@ -21,15 +21,16 @@ export default defineComponent ({
     const store = useStore();
     const toDoItem: Ref<ToDoItem> = ref({
       itemStatus: false,
+      isDisabled: true,
       timeStamp: '',
       toDoContent: '',
     });
 
     const addToDoItem = () => {
       toDoItem.value.timeStamp = new Date().toISOString();
-      let item = Object.assign({}, toDoItem.value)
-      toDoItem.value.toDoContent = '';
+      let item = Object.assign({}, toDoItem.value);
       store.dispatch('addToDoItem', item);
+      toDoItem.value.toDoContent = '';
     };
 
     return {
