@@ -1,26 +1,31 @@
 <template>
-  <v-container class="d-flex">
+  <v-container class="to-do-item d-flex flex-wrap bg-grey-lighten-3 rounded mb-2">
     <v-checkbox
-      class="flex-grow-0"
+      class="flex-grow-0 to-do-item__checkbox"
+      :class="toDoItem.itemStatus ? 'to-do-item__checkbox--checked' : 'to-do-item__checkbox--unchecked'"
       :label="toDoItem.itemStatus ? 'Done' : 'Undone'"
+      color="success"
+      hide-details
       v-model="toDoItem.itemStatus"
-      color="info"
     >
     </v-checkbox>
     <v-textarea
       class="flex-grow-1"
       rows="1"
       bg-color="transparent"
-      v-model="toDoItem.toDoContent"
       :disabled="toDoItem.isDisabled"
+      v-model="toDoItem.toDoContent"
+      hide-details
       clearable
       auto-grow
       no-resize
     >
     </v-textarea>
-    <v-btn v-if="toDoItem.isDisabled" color="warning" size="large" @click="editToDoItem">Edit</v-btn>
-    <v-btn v-if="!toDoItem.isDisabled" color="success" size="large" @click="confirmToDoItem">OK</v-btn>
-    <v-btn color="error" size="large" @click="deleteToDoItem(toDoItem.timeStamp)">Delete</v-btn>
+    <div class="ml-4">
+      <v-btn v-if="toDoItem.isDisabled" class="mt-2 mr-2" color="warning" size="large" @click="editToDoItem">Edit</v-btn>
+      <v-btn v-if="!toDoItem.isDisabled" class="mt-2 mr-2" color="success" size="large" @click="confirmToDoItem">OK</v-btn>
+      <v-btn class="mt-2" color="error" size="large" @click="deleteToDoItem(toDoItem.timeStamp)">Delete</v-btn>
+    </div>
   </v-container>
 </template>
 
@@ -63,5 +68,18 @@ export default defineComponent ({
 </script>
 
 <style lang="scss" scoped>
+.to-do-item {
 
+  &__checkbox {
+    min-width: 100px;
+
+    &--checked :deep(.v-label) {
+      color: green;
+    }
+
+    &--unchecked :deep(.v-label) {
+      color: red;
+    }
+  }
+}
 </style>

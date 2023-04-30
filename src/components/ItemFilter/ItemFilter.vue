@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-radio-group v-model="isChecked" inline @change="changeItemFilter">
+    <v-radio-group v-model="isChecked" hide-details inline @change="changeItemFilter">
       <v-radio label="All" color="info" value="all"></v-radio>
       <v-radio label="Done" color="info" value="done"></v-radio>
       <v-radio label="Undone" color="info" value="undone"></v-radio>

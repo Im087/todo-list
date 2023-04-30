@@ -1,11 +1,13 @@
 <template>
-  <v-container class="d-flex">
+  <v-container class="create-item d-flex flex-wrap justify-center">
     <v-text-field
+      class="create-item__input mb-2"
       placeholder="What are you gonna do?"
+      hide-details
       v-model="toDoItem.toDoContent"
     >
     </v-text-field>
-    <v-btn color="info" size="x-large" @click="addToDoItem">Create</v-btn>
+    <v-btn class="ml-6" color="info" size="x-large" @click="addToDoItem">Create</v-btn>
   </v-container>
 </template>
 
@@ -42,5 +44,10 @@ export default defineComponent ({
 </script>
 
 <style lang="scss" scoped>
+.create-item {
 
+  &__input {
+    min-width: 200px;
+  }
+}
 </style>
