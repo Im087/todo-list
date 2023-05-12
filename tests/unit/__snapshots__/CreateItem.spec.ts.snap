@@ -1,0 +1,134 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CreateItem.vue > snapshot > is OK 1`] = `
+<div
+  class="v-container create-item d-flex flex-wrap justify-center"
+  data-v-137df678=""
+>
+  <div
+    class="v-input v-input--horizontal v-input--density-default v-text-field create-item__input mb-2"
+    data-test-id="create-item__input"
+    data-v-137df678=""
+  >
+    <!---->
+    <div
+      class="v-input__control"
+    >
+      
+      <div
+        class="v-field v-field--no-label v-field--variant-filled v-theme--light"
+        role="textbox"
+      >
+        <div
+          class="v-field__overlay"
+        />
+        <div
+          class="v-field__loader"
+        >
+          <div
+            aria-hidden="true"
+            aria-valuemax="100"
+            aria-valuemin="0"
+            class="v-progress-linear v-theme--light"
+            role="progressbar"
+            style="top: 0px; height: 0px; --v-progress-linear-height: 2px; left: 50%; transform: translateX(-50%);"
+          >
+            <!---->
+            <div
+              class="v-progress-linear__background"
+              style="width: 100%;"
+            />
+            <transition-stub
+              appear="false"
+              css="true"
+              name="fade-transition"
+              persisted="false"
+            >
+              <div
+                class="v-progress-linear__indeterminate"
+              >
+                
+                <div
+                  class="v-progress-linear__indeterminate long"
+                />
+                <div
+                  class="v-progress-linear__indeterminate short"
+                />
+                
+              </div>
+            </transition-stub>
+            <!---->
+          </div>
+        </div>
+        <!---->
+        <div
+          class="v-field__field"
+          data-no-activator=""
+        >
+          <!---->
+          <label
+            class="v-label v-field-label"
+            for="input-0"
+          >
+            <!---->
+            
+            <!---->
+            
+          </label>
+          
+          
+          <!---->
+          <input
+            aria-describedby="input-0-messages"
+            class="v-field__input"
+            id="input-0"
+            placeholder="What are you gonna do?"
+            size="1"
+            type="text"
+          />
+          <!---->
+          
+          
+        </div>
+        <!---->
+        <!---->
+        <div
+          class="v-field__outline"
+        >
+          <!---->
+          <!---->
+        </div>
+      </div>
+      
+    </div>
+    <!---->
+    <!---->
+  </div>
+  <button
+    class="v-btn v-btn--elevated v-theme--light bg-info v-btn--density-default v-btn--size-x-large v-btn--variant-elevated ml-6"
+    data-test-id="create-item__btn"
+    data-v-137df678=""
+    type="button"
+  >
+    
+    <span
+      class="v-btn__overlay"
+    />
+    <span
+      class="v-btn__underlay"
+    />
+    
+    <!---->
+    <span
+      class="v-btn__content"
+      data-no-activator=""
+    >
+      
+       Create 
+      
+    </span>
+    <!---->
+    <!---->
+  </button>
+</div>
+`;

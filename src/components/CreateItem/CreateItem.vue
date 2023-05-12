@@ -5,22 +5,32 @@
       placeholder="What are you gonna do?"
       hide-details
       v-model="toDoItem.toDoContent"
+      data-test-id="create-item__input"
     >
     </v-text-field>
-    <v-btn class="ml-6" color="info" size="x-large" @click="addToDoItem">Create</v-btn>
+    <v-btn
+      class="ml-6"
+      color="info"
+      size="x-large"
+      @click="addToDoItem()"
+      data-test-id="create-item__btn"
+    >
+      Create
+    </v-btn>
   </v-container>
 </template>
 
 <script lang="ts">
-import { useStore } from "@/store";
+import { useStore } from "vuex";
 import { defineComponent, ref, type Ref } from "vue";
 
 import type { ToDoItem } from '../../interfaces';
+import store from "@/store";
 
 export default defineComponent ({
   name: "CreateItem",
   setup() {
-    const store = useStore();
+    // const store = useStore();
     const toDoItem: Ref<ToDoItem> = ref({
       itemStatus: false,
       isDisabled: true,

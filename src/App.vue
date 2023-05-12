@@ -24,7 +24,7 @@ import ItemFilter from './components/ItemFilter/ItemFilter.vue';
 import ToDoItemVue from './components/ToDoItem/ToDoItem.vue';
 
 import type { ToDoItem } from './interfaces';
-import { useStore } from './store';
+import { useStore } from 'vuex';
 
 export default defineComponent({
   name: 'App',
