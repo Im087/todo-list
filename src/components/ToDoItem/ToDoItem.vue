@@ -7,6 +7,7 @@
       color="success"
       hide-details
       v-model="toDoItem.itemStatus"
+      data-test-id="to-do-item__checkbox"
     >
     </v-checkbox>
     <v-textarea
@@ -17,22 +18,48 @@
       v-model="toDoItem.toDoContent"
       hide-details
       clearable
-      auto-grow
       no-resize
+      data-test-id="to-do-item__textarea"
     >
     </v-textarea>
     <div class="ml-4">
-      <v-btn v-if="toDoItem.isDisabled" class="mt-2 mr-2" color="warning" size="large" @click="editToDoItem">Edit</v-btn>
-      <v-btn v-if="!toDoItem.isDisabled" class="mt-2 mr-2" color="success" size="large" @click="confirmToDoItem">OK</v-btn>
-      <v-btn class="mt-2" color="error" size="large" @click="deleteToDoItem(toDoItem.timeStamp)">Delete</v-btn>
+      <v-btn
+        v-if="toDoItem.isDisabled"
+        class="mt-2 mr-2"
+        color="warning"
+        size="large"
+        @click="editToDoItem()"
+        data-test-id="to-do-item__edit-btn"
+      >
+        Edit
+      </v-btn>
+      <v-btn
+        v-if="!toDoItem.isDisabled"
+        class="mt-2 mr-2"
+        color="success"
+        size="large"
+        @click="confirmToDoItem()"
+        data-test-id="to-do-item__confirm-btn"
+      >
+        OK
+      </v-btn>
+      <v-btn
+        class="mt-2"
+        color="error"
+        size="large"
+        @click="deleteToDoItem(toDoItem.timeStamp)"
+        data-test-id="to-do-item__delete-btn"
+      >
+        Delete
+      </v-btn>
     </div>
   </v-container>
 </template>
 
 <script lang="ts">
 import { defineComponent, toRefs, type PropType } from "vue";
-import { useStore } from "@/store";
 import type { ToDoItem } from "@/interfaces";
+import store from "@/store";
 
 export default defineComponent ({
   name: "ToDoItem",
@@ -44,7 +71,6 @@ export default defineComponent ({
     }
   },
   setup(props) {
-    const store = useStore();
     const toDoItem = toRefs(props).toDoItem;
 
     const editToDoItem = () => {
