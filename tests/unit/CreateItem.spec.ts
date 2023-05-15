@@ -1,4 +1,4 @@
-import { describe, test, expect, vi, beforeEach, afterEach } from "vitest";
+import { describe, test, expect, vi, beforeEach, afterEach, SpyInstance } from "vitest";
 import CreateItem from '../../src/components/CreateItem/CreateItem.vue';
 import { VueWrapper, mount } from '@vue/test-utils';
 import { createVuetify } from "vuetify";
@@ -7,25 +7,26 @@ import * as directives from "vuetify/directives";
 
 describe('CreateItem.vue', () => {
   const vuetify = createVuetify({components, directives});
-  const $store = {
-    state: {
-      toDoArray: [{toDoContent: '123'}]
-    },
-    dispatch: vi.fn(),
-    commit: vi.fn()
-  };
+  // const $store = {
+  //   state: {
+  //     toDoArray: []
+  //   },
+  //   dispatch: vi.fn(),
+  //   commit: vi.fn()
+  // };
 
-  describe('When the input updates', () => {
+  describe('When the input updates', async () => {
     const wrapper = mount(CreateItem, {
       global: {
         plugins: [vuetify]
       }
     });
+    const vTextField = wrapper.getComponent('[data-test-id="create-item__input"]');
 
-    wrapper.getComponent('[data-test-id="create-item__input"]').get('input').setValue('todo');
+    await vTextField.get('input').setValue('todo');
 
     test('two-way binding will work', () => {
-      expect(wrapper.vm.toDoItem.toDoContent).toMatch('todo')
+      expect(wrapper.vm.toDoItem.toDoContent).toEqual('todo');
     });
 
     wrapper.unmount();
@@ -33,7 +34,9 @@ describe('CreateItem.vue', () => {
 
   describe('When clicking on CREATE button', () => {
     let wrapper: VueWrapper<any>;
-    beforeEach(() => {
+    let spy: SpyInstance<unknown[], unknown>;
+
+    beforeEach(async () => {
       wrapper = mount(CreateItem, {
         global: {
           plugins: [vuetify],
@@ -42,36 +45,43 @@ describe('CreateItem.vue', () => {
           // }
         }
       });
+      spy = vi.spyOn(wrapper.vm, 'addToDoItem');
+      const vTextField = wrapper.getComponent('[data-test-id="create-item__input"]');
+      const vBtn = wrapper.getComponent('[data-test-id="create-item__btn"]');
 
-      wrapper.getComponent('[data-test-id="create-item__input"]').get('input').setValue('todo');
+      await vTextField.get('input').setValue('todo');
+      await vBtn.get('button').trigger('click');
     });
 
     afterEach(() => {
-      wrapper.unmount()
-    })
+      wrapper.unmount();
+    });
 
-    test('addToDoItem function is called', async () => {
-      const spy = vi.spyOn(wrapper.vm, 'addToDoItem');
-      await wrapper.getComponent('[data-test-id="create-item__btn"]').get('button').trigger('click');
+    test('addToDoItem function is called', () => {
       expect(spy).toBeCalled();
     });
     // test('vuex action is called', () => {
     //   expect($store.dispatch).toHaveBeenCalled();
     // });
-    test('input will be empty', async () => {
-      await wrapper.getComponent('[data-test-id="create-item__btn"]').get('button').trigger('click');
-      expect(wrapper.find('input').element.value).toEqual('');
-    })
+    test('input will be empty', () => {
+      expect(wrapper.get('input').element.value).toEqual('');
+    });
+    test('toDoItem.toDoContent will be empty', () => {
+      expect(wrapper.vm.toDoItem.toDoContent).toEqual('');
+    });
   });
 
   describe('snapshot', () => {
-    test('is OK', () => {
-      const wrapper = mount(CreateItem, {
-        global: {
-          plugins: [vuetify]
-        }
-      });
-      expect(wrapper.vm.$el).toMatchSnapshot();
+    const wrapper = mount(CreateItem, {
+      global: {
+        plugins: [vuetify]
+      }
     });
+
+    test('is OK', () => {
+      expect(wrapper.element).toMatchSnapshot();
+    });
+
+    wrapper.unmount();
   });
 });
