@@ -21,7 +21,6 @@
 </template>
 
 <script lang="ts">
-import { useStore } from "vuex";
 import { defineComponent, ref, type Ref } from "vue";
 
 import type { ToDoItem } from '../../interfaces';
@@ -30,7 +29,6 @@ import store from "@/store";
 export default defineComponent ({
   name: "CreateItem",
   setup() {
-    // const store = useStore();
     const toDoItem: Ref<ToDoItem> = ref({
       itemStatus: false,
       isDisabled: true,

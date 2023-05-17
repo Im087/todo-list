@@ -1,0 +1,857 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ItemFilter.vue > Snapshot > is OK 1`] = `
+{
+  "$vuetify": {
+    "defaults": undefined,
+    "display": {
+      "height": 768,
+      "lg": false,
+      "lgAndDown": true,
+      "lgAndUp": false,
+      "md": true,
+      "mdAndDown": true,
+      "mdAndUp": true,
+      "mobile": true,
+      "mobileBreakpoint": "lg",
+      "name": "md",
+      "platform": {
+        "android": false,
+        "chrome": false,
+        "cordova": false,
+        "edge": false,
+        "electron": false,
+        "firefox": false,
+        "ios": false,
+        "linux": false,
+        "mac": false,
+        "opera": false,
+        "ssr": false,
+        "touch": false,
+        "win": true,
+      },
+      "sm": false,
+      "smAndDown": false,
+      "smAndUp": true,
+      "ssr": false,
+      "thresholds": {
+        "lg": 1280,
+        "md": 960,
+        "sm": 600,
+        "xl": 1920,
+        "xs": 0,
+        "xxl": 2560,
+      },
+      "update": [Function],
+      "width": 1024,
+      "xl": false,
+      "xlAndDown": true,
+      "xlAndUp": false,
+      "xs": false,
+      "xxl": false,
+    },
+    "icons": {
+      "aliases": {
+        "cancel": "mdi-close-circle",
+        "checkboxIndeterminate": "mdi-minus-box",
+        "checkboxOff": "mdi-checkbox-blank-outline",
+        "checkboxOn": "mdi-checkbox-marked",
+        "clear": "mdi-close-circle",
+        "close": "mdi-close",
+        "collapse": "mdi-chevron-up",
+        "complete": "mdi-check",
+        "delete": "mdi-close-circle",
+        "delimiter": "mdi-circle",
+        "dropdown": "mdi-menu-down",
+        "edit": "mdi-pencil",
+        "error": "mdi-close-circle",
+        "expand": "mdi-chevron-down",
+        "file": "mdi-paperclip",
+        "first": "mdi-page-first",
+        "info": "mdi-information",
+        "last": "mdi-page-last",
+        "loading": "mdi-cached",
+        "menu": "mdi-menu",
+        "minus": "mdi-minus",
+        "next": "mdi-chevron-right",
+        "plus": "mdi-plus",
+        "prev": "mdi-chevron-left",
+        "radioOff": "mdi-radiobox-blank",
+        "radioOn": "mdi-radiobox-marked",
+        "ratingEmpty": "mdi-star-outline",
+        "ratingFull": "mdi-star",
+        "ratingHalf": "mdi-star-half-full",
+        "sortAsc": "mdi-arrow-up",
+        "sortDesc": "mdi-arrow-down",
+        "subgroup": "mdi-menu-down",
+        "success": "mdi-check-circle",
+        "unfold": "mdi-unfold-more-horizontal",
+        "warning": "mdi-alert-circle",
+      },
+      "defaultSet": "mdi",
+      "sets": {
+        "class": {
+          "component": {
+            "_setup": [Function],
+            "filterProps": [Function],
+            "name": "VClassIcon",
+            "props": {
+              "_as": [Function],
+              "icon": {
+                "source": "icon",
+                "type": [
+                  [Function],
+                  [Function],
+                  [Function],
+                ],
+              },
+              "tag": {
+                "required": true,
+                "source": "icon",
+                "type": [Function],
+              },
+            },
+            "setup": [Function],
+          },
+        },
+        "mdi": {
+          "component": [Function],
+        },
+        "svg": {
+          "component": {
+            "_setup": [Function],
+            "filterProps": [Function],
+            "inheritAttrs": false,
+            "name": "VSvgIcon",
+            "props": {
+              "_as": [Function],
+              "icon": {
+                "source": "icon",
+                "type": [
+                  [Function],
+                  [Function],
+                  [Function],
+                ],
+              },
+              "tag": {
+                "required": true,
+                "source": "icon",
+                "type": [Function],
+              },
+            },
+            "setup": [Function],
+          },
+        },
+      },
+    },
+    "locale": {
+      "current": "en",
+      "fallback": "en",
+      "isRtl": false,
+      "messages": {
+        "en": {
+          "badge": "Badge",
+          "calendar": {
+            "moreEvents": "{0} more",
+          },
+          "carousel": {
+            "ariaLabel": {
+              "delimiter": "Carousel slide {0} of {1}",
+            },
+            "next": "Next visual",
+            "prev": "Previous visual",
+          },
+          "close": "Close",
+          "dataFooter": {
+            "firstPage": "First page",
+            "itemsPerPageAll": "All",
+            "itemsPerPageText": "Items per page:",
+            "lastPage": "Last page",
+            "nextPage": "Next page",
+            "pageText": "{0}-{1} of {2}",
+            "prevPage": "Previous page",
+          },
+          "dataIterator": {
+            "loadingText": "Loading items...",
+            "noResultsText": "No matching records found",
+          },
+          "dataTable": {
+            "ariaLabel": {
+              "activateAscending": "Activate to sort ascending.",
+              "activateDescending": "Activate to sort descending.",
+              "activateNone": "Activate to remove sorting.",
+              "sortAscending": "Sorted ascending.",
+              "sortDescending": "Sorted descending.",
+              "sortNone": "Not sorted.",
+            },
+            "itemsPerPageText": "Rows per page:",
+            "sortBy": "Sort by",
+          },
+          "datePicker": {
+            "itemsSelected": "{0} selected",
+            "nextMonthAriaLabel": "Next month",
+            "nextYearAriaLabel": "Next year",
+            "prevMonthAriaLabel": "Previous month",
+            "prevYearAriaLabel": "Previous year",
+          },
+          "fileInput": {
+            "counter": "{0} files",
+            "counterSize": "{0} files ({1} in total)",
+          },
+          "input": {
+            "appendAction": "{0} appended action",
+            "clear": "Clear {0}",
+            "prependAction": "{0} prepended action",
+          },
+          "loading": "Loading...",
+          "noDataText": "No data available",
+          "pagination": {
+            "ariaLabel": {
+              "currentPage": "Page {0}, Current page",
+              "first": "First page",
+              "last": "Last page",
+              "next": "Next page",
+              "page": "Go to page {0}",
+              "previous": "Previous page",
+              "root": "Pagination Navigation",
+            },
+          },
+          "rating": {
+            "ariaLabel": {
+              "item": "Rating {0} of {1}",
+            },
+          },
+          "timePicker": {
+            "am": "AM",
+            "pm": "PM",
+          },
+        },
+      },
+      "n": [Function],
+      "name": "vuetify",
+      "provide": [Function],
+      "rtl": {
+        "af": false,
+        "ar": true,
+        "az": false,
+        "bg": false,
+        "ca": false,
+        "ckb": false,
+        "cs": false,
+        "de": false,
+        "el": false,
+        "en": false,
+        "es": false,
+        "et": false,
+        "fa": true,
+        "fi": false,
+        "fr": false,
+        "he": true,
+        "hr": false,
+        "hu": false,
+        "id": false,
+        "it": false,
+        "ja": false,
+        "ko": false,
+        "lt": false,
+        "lv": false,
+        "nl": false,
+        "no": false,
+        "pl": false,
+        "pt": false,
+        "ro": false,
+        "ru": false,
+        "sk": false,
+        "sl": false,
+        "srCyrl": false,
+        "srLatn": false,
+        "sv": false,
+        "th": false,
+        "tr": false,
+        "uk": false,
+        "vi": false,
+        "zhHans": false,
+        "zhHant": false,
+      },
+      "rtlClasses": "v-locale--is-ltr",
+      "t": [Function],
+    },
+    "theme": {
+      "computedThemes": {
+        "dark": {
+          "colors": {
+            "background": "#121212",
+            "error": "#CF6679",
+            "info": "#2196F3",
+            "on-background": "#fff",
+            "on-error": "#fff",
+            "on-info": "#fff",
+            "on-primary": "#fff",
+            "on-primary-darken-1": "#fff",
+            "on-secondary": "#000",
+            "on-secondary-darken-1": "#000",
+            "on-success": "#fff",
+            "on-surface": "#fff",
+            "on-surface-variant": "#424242",
+            "on-warning": "#fff",
+            "primary": "#BB86FC",
+            "primary-darken-1": "#3700B3",
+            "secondary": "#03DAC5",
+            "secondary-darken-1": "#03DAC5",
+            "success": "#4CAF50",
+            "surface": "#212121",
+            "surface-variant": "#BDBDBD",
+            "warning": "#FB8C00",
+          },
+          "dark": true,
+          "variables": {
+            "activated-opacity": 0.12,
+            "border-color": "#FFFFFF",
+            "border-opacity": 0.12,
+            "disabled-opacity": 0.38,
+            "dragged-opacity": 0.08,
+            "focus-opacity": 0.12,
+            "high-emphasis-opacity": 0.87,
+            "hover-opacity": 0.04,
+            "idle-opacity": 0.1,
+            "medium-emphasis-opacity": 0.6,
+            "pressed-opacity": 0.16,
+            "selected-opacity": 0.08,
+            "theme-code": "#343434",
+            "theme-kbd": "#212529",
+            "theme-on-code": "#CCCCCC",
+            "theme-on-kbd": "#FFFFFF",
+          },
+        },
+        "light": {
+          "colors": {
+            "background": "#FFFFFF",
+            "error": "#B00020",
+            "info": "#2196F3",
+            "on-background": "#000",
+            "on-error": "#fff",
+            "on-info": "#fff",
+            "on-primary": "#fff",
+            "on-primary-darken-1": "#fff",
+            "on-secondary": "#000",
+            "on-secondary-darken-1": "#fff",
+            "on-success": "#fff",
+            "on-surface": "#000",
+            "on-surface-variant": "#EEEEEE",
+            "on-warning": "#fff",
+            "primary": "#6200EE",
+            "primary-darken-1": "#3700B3",
+            "secondary": "#03DAC6",
+            "secondary-darken-1": "#018786",
+            "success": "#4CAF50",
+            "surface": "#FFFFFF",
+            "surface-variant": "#424242",
+            "warning": "#FB8C00",
+          },
+          "dark": false,
+          "variables": {
+            "activated-opacity": 0.12,
+            "border-color": "#000000",
+            "border-opacity": 0.12,
+            "disabled-opacity": 0.38,
+            "dragged-opacity": 0.08,
+            "focus-opacity": 0.12,
+            "high-emphasis-opacity": 0.87,
+            "hover-opacity": 0.04,
+            "idle-opacity": 0.04,
+            "medium-emphasis-opacity": 0.6,
+            "pressed-opacity": 0.12,
+            "selected-opacity": 0.08,
+            "theme-code": "#F5F5F5",
+            "theme-kbd": "#212529",
+            "theme-on-code": "#000000",
+            "theme-on-kbd": "#FFFFFF",
+          },
+        },
+      },
+      "current": {
+        "colors": {
+          "background": "#FFFFFF",
+          "error": "#B00020",
+          "info": "#2196F3",
+          "on-background": "#000",
+          "on-error": "#fff",
+          "on-info": "#fff",
+          "on-primary": "#fff",
+          "on-primary-darken-1": "#fff",
+          "on-secondary": "#000",
+          "on-secondary-darken-1": "#fff",
+          "on-success": "#fff",
+          "on-surface": "#000",
+          "on-surface-variant": "#EEEEEE",
+          "on-warning": "#fff",
+          "primary": "#6200EE",
+          "primary-darken-1": "#3700B3",
+          "secondary": "#03DAC6",
+          "secondary-darken-1": "#018786",
+          "success": "#4CAF50",
+          "surface": "#FFFFFF",
+          "surface-variant": "#424242",
+          "warning": "#FB8C00",
+        },
+        "dark": false,
+        "variables": {
+          "activated-opacity": 0.12,
+          "border-color": "#000000",
+          "border-opacity": 0.12,
+          "disabled-opacity": 0.38,
+          "dragged-opacity": 0.08,
+          "focus-opacity": 0.12,
+          "high-emphasis-opacity": 0.87,
+          "hover-opacity": 0.04,
+          "idle-opacity": 0.04,
+          "medium-emphasis-opacity": 0.6,
+          "pressed-opacity": 0.12,
+          "selected-opacity": 0.08,
+          "theme-code": "#F5F5F5",
+          "theme-kbd": "#212529",
+          "theme-on-code": "#000000",
+          "theme-on-kbd": "#FFFFFF",
+        },
+      },
+      "global": {
+        "current": {
+          "colors": {
+            "background": "#FFFFFF",
+            "error": "#B00020",
+            "info": "#2196F3",
+            "on-background": "#000",
+            "on-error": "#fff",
+            "on-info": "#fff",
+            "on-primary": "#fff",
+            "on-primary-darken-1": "#fff",
+            "on-secondary": "#000",
+            "on-secondary-darken-1": "#fff",
+            "on-success": "#fff",
+            "on-surface": "#000",
+            "on-surface-variant": "#EEEEEE",
+            "on-warning": "#fff",
+            "primary": "#6200EE",
+            "primary-darken-1": "#3700B3",
+            "secondary": "#03DAC6",
+            "secondary-darken-1": "#018786",
+            "success": "#4CAF50",
+            "surface": "#FFFFFF",
+            "surface-variant": "#424242",
+            "warning": "#FB8C00",
+          },
+          "dark": false,
+          "variables": {
+            "activated-opacity": 0.12,
+            "border-color": "#000000",
+            "border-opacity": 0.12,
+            "disabled-opacity": 0.38,
+            "dragged-opacity": 0.08,
+            "focus-opacity": 0.12,
+            "high-emphasis-opacity": 0.87,
+            "hover-opacity": 0.04,
+            "idle-opacity": 0.04,
+            "medium-emphasis-opacity": 0.6,
+            "pressed-opacity": 0.12,
+            "selected-opacity": 0.08,
+            "theme-code": "#F5F5F5",
+            "theme-kbd": "#212529",
+            "theme-on-code": "#000000",
+            "theme-on-kbd": "#FFFFFF",
+          },
+        },
+        "name": "light",
+      },
+      "install": [Function],
+      "isDisabled": undefined,
+      "name": "light",
+      "styles": ":root {
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 98,0,238;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 3,218,198;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--light {
+      color-scheme: normal;
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 98,0,238;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 3,218,198;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--dark {
+      color-scheme: dark;
+      --v-theme-background: 18,18,18;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 33,33,33;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-variant: 189,189,189;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 66,66,66;
+      --v-theme-primary: 187,134,252;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 55,0,179;
+      --v-theme-primary-darken-1-overlay-multiplier: 1;
+      --v-theme-secondary: 3,218,197;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 3,218,197;
+      --v-theme-secondary-darken-1-overlay-multiplier: 2;
+      --v-theme-error: 207,102,121;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 2;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 2;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 2;
+      --v-theme-on-background: 255,255,255;
+      --v-theme-on-surface: 255,255,255;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 0,0,0;
+      --v-theme-on-secondary-darken-1: 0,0,0;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 255, 255, 255;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.1;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.16;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 52, 52, 52;
+      --v-theme-on-code: 204, 204, 204;
+    }
+    .bg-background {
+      --v-theme-overlay-multiplier: var(--v-theme-background-overlay-multiplier);
+      background-color: rgb(var(--v-theme-background)) !important;
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .bg-surface {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface)) !important;
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .bg-surface-variant {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-variant-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-variant)) !important;
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .bg-primary {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary)) !important;
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .bg-primary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .bg-secondary {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary)) !important;
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .bg-secondary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .bg-error {
+      --v-theme-overlay-multiplier: var(--v-theme-error-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error)) !important;
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .bg-info {
+      --v-theme-overlay-multiplier: var(--v-theme-info-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info)) !important;
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .bg-success {
+      --v-theme-overlay-multiplier: var(--v-theme-success-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success)) !important;
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .bg-warning {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning)) !important;
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .text-background {
+      color: rgb(var(--v-theme-background)) !important;
+    }
+    .border-background {
+      --v-border-color: var(--v-theme-background);
+    }
+    .text-surface {
+      color: rgb(var(--v-theme-surface)) !important;
+    }
+    .border-surface {
+      --v-border-color: var(--v-theme-surface);
+    }
+    .text-surface-variant {
+      color: rgb(var(--v-theme-surface-variant)) !important;
+    }
+    .border-surface-variant {
+      --v-border-color: var(--v-theme-surface-variant);
+    }
+    .on-surface-variant {
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .text-primary {
+      color: rgb(var(--v-theme-primary)) !important;
+    }
+    .border-primary {
+      --v-border-color: var(--v-theme-primary);
+    }
+    .text-primary-darken-1 {
+      color: rgb(var(--v-theme-primary-darken-1)) !important;
+    }
+    .border-primary-darken-1 {
+      --v-border-color: var(--v-theme-primary-darken-1);
+    }
+    .text-secondary {
+      color: rgb(var(--v-theme-secondary)) !important;
+    }
+    .border-secondary {
+      --v-border-color: var(--v-theme-secondary);
+    }
+    .text-secondary-darken-1 {
+      color: rgb(var(--v-theme-secondary-darken-1)) !important;
+    }
+    .border-secondary-darken-1 {
+      --v-border-color: var(--v-theme-secondary-darken-1);
+    }
+    .text-error {
+      color: rgb(var(--v-theme-error)) !important;
+    }
+    .border-error {
+      --v-border-color: var(--v-theme-error);
+    }
+    .text-info {
+      color: rgb(var(--v-theme-info)) !important;
+    }
+    .border-info {
+      --v-border-color: var(--v-theme-info);
+    }
+    .text-success {
+      color: rgb(var(--v-theme-success)) !important;
+    }
+    .border-success {
+      --v-border-color: var(--v-theme-success);
+    }
+    .text-warning {
+      color: rgb(var(--v-theme-warning)) !important;
+    }
+    .border-warning {
+      --v-border-color: var(--v-theme-warning);
+    }
+    .on-background {
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .on-surface {
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .on-primary {
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .on-primary-darken-1 {
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .on-secondary {
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .on-secondary-darken-1 {
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .on-error {
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .on-info {
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .on-success {
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .on-warning {
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+",
+      "themeClasses": "v-theme--light",
+      "themes": {
+        "dark": {
+          "colors": {
+            "background": "#121212",
+            "error": "#CF6679",
+            "info": "#2196F3",
+            "on-surface-variant": "#424242",
+            "primary": "#BB86FC",
+            "primary-darken-1": "#3700B3",
+            "secondary": "#03DAC5",
+            "secondary-darken-1": "#03DAC5",
+            "success": "#4CAF50",
+            "surface": "#212121",
+            "surface-variant": "#BDBDBD",
+            "warning": "#FB8C00",
+          },
+          "dark": true,
+          "variables": {
+            "activated-opacity": 0.12,
+            "border-color": "#FFFFFF",
+            "border-opacity": 0.12,
+            "disabled-opacity": 0.38,
+            "dragged-opacity": 0.08,
+            "focus-opacity": 0.12,
+            "high-emphasis-opacity": 0.87,
+            "hover-opacity": 0.04,
+            "idle-opacity": 0.1,
+            "medium-emphasis-opacity": 0.6,
+            "pressed-opacity": 0.16,
+            "selected-opacity": 0.08,
+            "theme-code": "#343434",
+            "theme-kbd": "#212529",
+            "theme-on-code": "#CCCCCC",
+            "theme-on-kbd": "#FFFFFF",
+          },
+        },
+        "light": {
+          "colors": {
+            "background": "#FFFFFF",
+            "error": "#B00020",
+            "info": "#2196F3",
+            "on-surface-variant": "#EEEEEE",
+            "primary": "#6200EE",
+            "primary-darken-1": "#3700B3",
+            "secondary": "#03DAC6",
+            "secondary-darken-1": "#018786",
+            "success": "#4CAF50",
+            "surface": "#FFFFFF",
+            "surface-variant": "#424242",
+            "warning": "#FB8C00",
+          },
+          "dark": false,
+          "variables": {
+            "activated-opacity": 0.12,
+            "border-color": "#000000",
+            "border-opacity": 0.12,
+            "disabled-opacity": 0.38,
+            "dragged-opacity": 0.08,
+            "focus-opacity": 0.12,
+            "high-emphasis-opacity": 0.87,
+            "hover-opacity": 0.04,
+            "idle-opacity": 0.04,
+            "medium-emphasis-opacity": 0.6,
+            "pressed-opacity": 0.12,
+            "selected-opacity": 0.08,
+            "theme-code": "#F5F5F5",
+            "theme-kbd": "#212529",
+            "theme-on-code": "#000000",
+            "theme-on-kbd": "#FFFFFF",
+          },
+        },
+      },
+    },
+  },
+  "changeItemFilter": [Function],
+  "isChecked": "all",
+  "itemFilter": "all",
+}
+`;
