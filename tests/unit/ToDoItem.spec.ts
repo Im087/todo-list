@@ -1,4 +1,4 @@
-import { describe, test, expect, vi, beforeEach, afterEach } from "vitest";
+import { describe, test, expect, vi, beforeEach, afterEach, SpyInstance } from "vitest";
 import ToDoItem from '../../src/components/ToDoItem/ToDoItem.vue';
 import { VueWrapper, mount } from '@vue/test-utils';
 import { createVuetify } from "vuetify";
@@ -110,25 +110,34 @@ describe('ToDoItem.vue', () => {
     wrapper.unmount();
   });
 
-  describe('When clicking on EDIT button', async () => {
-    const toDoItem = {
-      itemStatus: false,
-      isDisabled: true,
-      timeStamp: new Date().toISOString(),
-      toDoContent: 'todo',
-    };
-    const wrapper = mount(ToDoItem, {
-      global: {
-        plugins: [vuetify]
-      },
-      props: {
-        toDoItem
-      }
+  describe('When clicking on EDIT button', () => {
+    let wrapper: VueWrapper<any>;
+    let spy: SpyInstance<unknown[], unknown>;
+
+    beforeEach(async () => {
+      const toDoItem = {
+        itemStatus: false,
+        isDisabled: true,
+        timeStamp: new Date().toISOString(),
+        toDoContent: 'todo',
+      };
+      wrapper = mount(ToDoItem, {
+        global: {
+          plugins: [vuetify]
+        },
+        props: {
+          toDoItem
+        }
+      });
+      spy = vi.spyOn(wrapper.vm, 'editToDoItem');
+      const vBtn = wrapper.getComponent('[data-test-id="to-do-item__edit-btn"]');
+      
+      await vBtn.get('button').trigger('click');
     });
-    const vBtn = wrapper.getComponent('[data-test-id="to-do-item__edit-btn"]');
-    const spy = vi.spyOn(wrapper.vm, 'editToDoItem');
-    
-    await vBtn.get('button').trigger('click');
+
+    afterEach(() => {
+      wrapper.unmount();
+    });
 
     test('editToDoItem function is called', () => {
       expect(spy).toHaveBeenCalled();
@@ -139,35 +148,42 @@ describe('ToDoItem.vue', () => {
     test('toToItem.isDisabled is false', () => {
       expect(wrapper.vm.toDoItem.isDisabled).toBeFalsy();
     });
-    // test('EDIT button is destroyed', () => {
-    //   expect(wrapper.findComponent('[data-test-id="to-do-item__edit-btn"]').exists()).toBeFalsy();
-    // });
-    // test('OK button is created', () => {
-    //   expect(wrapper.findComponent('[data-test-id="to-do-item__confirm-btn"]').exists()).toBeTruthy();
-    // });
-
-    wrapper.unmount();
+    test('EDIT button is destroyed', () => {
+      expect(wrapper.findComponent('[data-test-id="to-do-item__edit-btn"]').exists()).toBeFalsy();
+    });
+    test('OK button is created', () => {
+      expect(wrapper.findComponent('[data-test-id="to-do-item__confirm-btn"]').exists()).toBeTruthy();
+    });
   });
 
   describe('When clicking on OK button', async () => {
-    const toDoItem = {
-      itemStatus: false,
-      isDisabled: false,
-      timeStamp: new Date().toISOString(),
-      toDoContent: 'todo',
-    };
-    const wrapper = mount(ToDoItem, {
-      global: {
-        plugins: [vuetify]
-      },
-      props: {
-        toDoItem
-      }
-    });
-    const vBtn = wrapper.getComponent('[data-test-id="to-do-item__confirm-btn"]');
-    const spy = vi.spyOn(wrapper.vm, 'confirmToDoItem');
+    let wrapper: VueWrapper<any>;
+    let spy: SpyInstance<unknown[], unknown>;
 
-    await vBtn.get('button').trigger('click');
+    beforeEach(async () => {
+      const toDoItem = {
+        itemStatus: false,
+        isDisabled: false,
+        timeStamp: new Date().toISOString(),
+        toDoContent: 'todo',
+      };
+      wrapper = mount(ToDoItem, {
+        global: {
+          plugins: [vuetify]
+        },
+        props: {
+          toDoItem
+        }
+      });
+      spy = vi.spyOn(wrapper.vm, 'confirmToDoItem');
+      const vBtn = wrapper.getComponent('[data-test-id="to-do-item__confirm-btn"]');
+      
+      await vBtn.get('button').trigger('click');
+    });
+
+    afterEach(() => {
+      wrapper.unmount();
+    });
 
     test('confirmToDoItem function is called', () => {
       expect(spy).toBeCalled();
@@ -178,14 +194,12 @@ describe('ToDoItem.vue', () => {
     test('toToItem.isDisabled is true', () => {
       expect(wrapper.vm.toDoItem.isDisabled).toBeTruthy();
     });
-    // test('OK button is destroyed', () => {
-    //   expect(wrapper.findComponent('[data-test-id="to-do-item__confirm-btn"]').exists()).toBeFalsy();
-    // });
-    // test('EDIT button is created', () => {
-    //   expect(wrapper.findComponent('[data-test-id="to-do-item__edit-btn"]').exists()).toBeTruthy();
-    // });
-
-    wrapper.unmount();
+    test('OK button is destroyed', () => {
+      expect(wrapper.findComponent('[data-test-id="to-do-item__confirm-btn"]').exists()).toBeFalsy();
+    });
+    test('EDIT button is created', () => {
+      expect(wrapper.findComponent('[data-test-id="to-do-item__edit-btn"]').exists()).toBeTruthy();
+    });
   });
 
   describe('When clicking on DELETE button', async () => {
